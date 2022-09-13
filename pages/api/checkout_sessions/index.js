@@ -18,17 +18,17 @@ export default cors(async function handler(req,res){
                 line_items:[{
                     price_data:{
                         currency:"inr",
-                        unit_amount:req.body.items.amount,
+                        unit_amount: 3000,
                      product_data:{
-                            name:req.body.items.name,
-                            description:req.body.items.description
+                            name: "pants",
+                            description: "kuch bh"
                         },
                        },
-                    quantity:req.body.tems.quantity
+                    quantity: 2
                    
                 }],
-                success_url:`/cancel_url`,
-                cancel_url:`/cancel_url`
+                success_url:`http://localhost:3000/cancel_url`,
+                cancel_url:`http://localhost:3000/cancel_url`
             })
         console.log(session)
             res.status(200).json(session)

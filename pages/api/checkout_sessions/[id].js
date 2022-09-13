@@ -4,6 +4,7 @@ const stripe=new Stripe(process.env.NEXT_SECRET)
 
 export default async function  handler(){
     const id=req.query.id
+    console.log(id)
 
     try{
 
